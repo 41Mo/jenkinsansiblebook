@@ -1,7 +1,12 @@
 ---
-- name: "Test playbook run"
-  hosts: all
-  tasks:
-    - name: "Debug"
-      ansible.builtin.debug:
-        msg: "Test debug"
+- hosts: lamp
+  become: true
+  remote_user: admini
+  roles:
+    - lamp
+
+- hosts: test
+  become: true
+  remote_user: root
+  roles:
+    - test

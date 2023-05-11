@@ -1,0 +1,14 @@
+[lamp]
+172.17.0.3
+
+[lamp:vars]
+mysql_root_password=mysql_root_password
+app_user=mysql
+http_host=172.17.0.3
+http_conf=mdu-ubuntu-test.conf
+http_port=8081
+disable_default=true
+apache_port=8081
+
+[test]
+172.17.0.3
